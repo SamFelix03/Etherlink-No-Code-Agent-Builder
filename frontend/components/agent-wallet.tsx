@@ -201,7 +201,7 @@ export function AgentWalletModal({ open, onOpenChange }: AgentWalletModalProps) 
   }
 
   const handleClaimFunds = () => {
-    window.open("https://faucet.sepolia.etherlink.xyz", "_blank")
+    window.open("https://shadownet.faucet.etherlink.com", "_blank")
   }
 
   // Get balance for display in button
