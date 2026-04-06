@@ -41,25 +41,25 @@ Getting started with Etherlink No-Code Agent Builder is simple! Follow these ste
 2. **Get Started** with just a Google sign in.
 3. **Create an Agent Wallet** or Import your own wallet from private key.
    
-   <img width="1470" height="913" alt="Screenshot 2025-11-05 at 3 55 35 PM" src="https://github.com/user-attachments/assets/6949d8b9-380b-468c-8be4-6c13df0430a0" />
+  <img width="1470" height="920" alt="Screenshot 2026-04-07 at 1 20 42 AM" src="https://github.com/user-attachments/assets/0dd3ec35-16a9-4fd9-ad91-734c66ba446e" />
 
 4. **Create Your First Agent** by just drag-dropping the tools you need!
    
-   <img width="1470" height="919" alt="Screenshot 2025-11-05 at 3 57 10 PM" src="https://github.com/user-attachments/assets/b402548a-9509-4e36-8a50-3e168616744f" />
+  <img width="1470" height="920" alt="Screenshot 2026-04-07 at 1 21 59 AM" src="https://github.com/user-attachments/assets/3b519400-29be-4506-9387-e0c07cbfb318" />
 
 5. **You Can Also AI Generate Your Agent!** just ask our AI to generate your agent with the right tools.
    
-   <img width="1470" height="919" alt="Screenshot 2025-11-05 at 3 58 19 PM" src="https://github.com/user-attachments/assets/6e660f4d-0c49-439b-87f8-ab8bce482a5c" />
+  <img width="1470" height="919" alt="510075316-6e660f4d-0c49-439b-87f8-ab8bce482a5c (1)" src="https://github.com/user-attachments/assets/3dcbe4d0-1b34-4872-bae5-9014568b1920" />
 
 6. **Save your agent**.
 
-   <img width="1470" height="919" alt="Screenshot 2025-11-05 at 3 57 43 PM" src="https://github.com/user-attachments/assets/f877450d-9bd4-428b-8cbe-f35af87d4752" />
+  <img width="1470" height="919" alt="510075537-f877450d-9bd4-428b-8cbe-f35af87d4752" src="https://github.com/user-attachments/assets/4508e875-de3d-414c-9205-b2247b81eff5" />
 
 7. **Interact with it** in the UI or with curl requests by using your api key.
    
    <img width="1470" height="918" alt="Screenshot 2025-11-05 at 7 11 58 PM" src="https://github.com/user-attachments/assets/bcba568e-381e-4f1b-bdf5-224b837d8b5b" />
 
-   <img width="1385" height="483" alt="Screenshot 2025-11-05 at 4 00 37 PM" src="https://github.com/user-attachments/assets/6dc16a6d-cbf8-4baa-9028-ae1b2fdd14cc" />
+  <img width="1470" height="920" alt="Screenshot 2026-04-07 at 1 27 19 AM" src="https://github.com/user-attachments/assets/0deb3a4c-1be4-4a29-8ac1-2c7f65895a75" />
 
 That's it! You've created your first Etherlink agent without any programming knowledge, as simple as that!
 
