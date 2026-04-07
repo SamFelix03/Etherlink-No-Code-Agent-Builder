@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { getAgentByApiKey } from '@/lib/agents'
 import { supabase } from '@/lib/supabase'
 
-const EXTERNAL_AGENT_API_URL = 'https://etherlinkagent-739298578243.us-central1.run.app/agent/chat'
+const EXTERNAL_AGENT_API_URL = 'https://etherlink-agent-1007970783732.us-central1.run.app/agent/chat'
 
 export async function POST(request: Request) {
   try {

@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
 
     // Make request to external workflow builder API
     const response = await fetch(
-      'https://workflowbuilder-739298578243.us-central1.run.app/create-workflow',
+      'https://etherlink-workflow-builder-1007970783732.us-central1.run.app/create-workflow',
       {
         method: 'POST',
         headers: {
