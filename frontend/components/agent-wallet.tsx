@@ -238,17 +238,72 @@ export function AgentWalletModal({ open, onOpenChange }: AgentWalletModalProps) 
         )}
       </Button>
 
-      {/* Main Wallet Modal */}
-      <Dialog open={open && !showCreateDialog && !showImportDialog && !newPrivateKey} onOpenChange={onOpenChange}>
+      {/* Main Wallet Modal (import flow is inline to avoid nested Radix dialogs breaking open state) */}
+      <Dialog
+        open={open && !showCreateDialog && !newPrivateKey}
+        onOpenChange={(next) => {
+          if (!next) {
+            setShowImportDialog(false)
+            setPrivateKeyInput("")
+          }
+          onOpenChange(next)
+        }}
+      >
         <DialogContent className="max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Wallet className="h-5 w-5" />
-              Agent Wallet
+              {showImportDialog ? (
+                <>
+                  <Download className="h-5 w-5" />
+                  Import Wallet
+                </>
+              ) : (
+                <>
+                  <Wallet className="h-5 w-5" />
+                  Agent Wallet
+                </>
+              )}
             </DialogTitle>
+            {showImportDialog && (
+              <DialogDescription>
+                Enter your private key to import an existing wallet.
+              </DialogDescription>
+            )}
           </DialogHeader>
 
-          {dbUser?.wallet_address ? (
+          {showImportDialog && !dbUser?.wallet_address ? (
+            <>
+              <div className="space-y-4 py-4">
+                <div className="space-y-2">
+                  <Label htmlFor="privateKey">Private Key</Label>
+                  <Input
+                    id="privateKey"
+                    type="password"
+                    placeholder="0x..."
+                    value={privateKeyInput}
+                    onChange={(e) => setPrivateKeyInput(e.target.value)}
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Your private key will be encrypted and stored securely.
+                  </p>
+                </div>
+              </div>
+              <DialogFooter>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setShowImportDialog(false)
+                    setPrivateKeyInput("")
+                  }}
+                >
+                  Cancel
+                </Button>
+                <Button onClick={handleImportWallet} disabled={isImporting}>
+                  {isImporting ? "Importing..." : "Import Wallet"}
+                </Button>
+              </DialogFooter>
+            </>
+          ) : dbUser?.wallet_address ? (
             <div className="space-y-6 py-4">
               {/* Wallet Address */}
               <div className="space-y-2">
@@ -414,45 +469,6 @@ export function AgentWalletModal({ open, onOpenChange }: AgentWalletModalProps) 
               </DialogFooter>
             </>
           )}
-        </DialogContent>
-      </Dialog>
-
-      {/* Import Wallet Dialog */}
-      <Dialog open={showImportDialog} onOpenChange={setShowImportDialog}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Import Wallet</DialogTitle>
-            <DialogDescription>Enter your private key to import an existing wallet.</DialogDescription>
-          </DialogHeader>
-          <div className="space-y-4 py-4">
-            <div className="space-y-2">
-              <Label htmlFor="privateKey">Private Key</Label>
-              <Input
-                id="privateKey"
-                type="password"
-                placeholder="0x..."
-                value={privateKeyInput}
-                onChange={(e) => setPrivateKeyInput(e.target.value)}
-              />
-              <p className="text-xs text-muted-foreground">
-                Your private key will be encrypted and stored securely.
-              </p>
-            </div>
-          </div>
-          <DialogFooter>
-            <Button
-              variant="outline"
-              onClick={() => {
-                setShowImportDialog(false)
-                setPrivateKeyInput("")
-              }}
-            >
-              Cancel
-            </Button>
-            <Button onClick={handleImportWallet} disabled={isImporting}>
-              {isImporting ? "Importing..." : "Import Wallet"}
-            </Button>
-          </DialogFooter>
         </DialogContent>
       </Dialog>
 
