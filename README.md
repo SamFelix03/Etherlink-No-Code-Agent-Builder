@@ -9,7 +9,7 @@ The platform supports 10 blockchain tools including **token transfers, swaps, to
 ## Resources
 
 * **Pitch Deck** : [View Here](https://canva.link/ufdaia7vhx8jzaa)
-* **Demo Video** : [View Here]()
+* **Demo Video** : [View Here](https://www.youtube.com/watch?v=WGgT6A8DTeQ)
 * **Live Demo** : [View Here](https://etherlink-agent-builder.vercel.app)
   
 ### Deployed Tool Contracts
